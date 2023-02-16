@@ -3,7 +3,7 @@
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 30vmin;
   pointer-events: none;
 }
 
@@ -19,7 +19,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  gap: .5rem;
   font-size: calc(10px + 2vmin);
   color: white;
 }
@@ -28,6 +28,48 @@
   color: #61dafb;
 }
 
+.title{
+  font-family: 'Roboto', sans-serif;
+}
+
+.user-input{
+  background-color: #282c34;
+  color: white;
+  font-size: 1.3rem;
+  border-radius: 50px;
+  padding-left: .5rem;
+  border: 1px solid white;
+  transition: all .1s ease-in-out;
+  height: 2rem;
+  width: 20rem;
+}
+
+.user-input::placeholder{
+  color: white;
+}
+
+.user-input:focus{
+  border: 1px solid white;
+  outline: 1px solid white;
+  background-color: #282c34;
+  
+}
+
+.btn{
+  width: 150px;
+  border: none;
+  border-radius: 50px;
+  background-color: #61dafb;
+  color: white;
+  font-size: 18px;
+  padding: .2rem;
+  transition: all .2s ease-in-out;
+}
+
+.btn:hover{
+  background-color: #282c34;
+  border: 1px solid #61dafb;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
