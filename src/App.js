@@ -1,16 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from './components/Header';
+import Input from './components/Input';
+import Confetti from './confetti';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1 className='title'>Hello World!</h1>
-        <input className='user-input' placeholder='write your name...' />
-        <button className='btn'>Submit</button>
-      </header>
-    </div>
+    <>
+      <div className="App">
+        <Header />
+        <Input />
+        <Confetti />
+
+      </div>
+    </>
   );
 }
 
