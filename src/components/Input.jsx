@@ -4,7 +4,6 @@ function Input() {
   const [val, setVal] = useState("");
   const click = () => {
     alert(`Hello ${val}`)
-    val = ''
   }
 
   const change = event => {
