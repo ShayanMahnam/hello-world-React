@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import ReactConfetti from "react-confetti";
+import capitalize from "../helperFunctions/capitalize";
 
 function Input() {
   const [val, setVal] = useState("");
@@ -23,11 +24,9 @@ function Input() {
     };
   }, []);
 
-  const capitalize = (str) => {
-    return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
-  };
+  
 
-  const click = () => {
+  const handleClick = () => {
     if (val !== "") {
       setShowText(true);
       setShowConfetti(true);
@@ -36,8 +35,9 @@ function Input() {
     }
   };
 
-  const change = (event) => {
+  const handleChange = (event) => {
     setVal(event.target.value);
+    setShowText(false)
   };
 
   const handleConfettiComplete = () => {
@@ -47,12 +47,12 @@ function Input() {
   return (
     <>
       <input
-        onChange={change}
+        onChange={handleChange}
         className="user-input"
         placeholder="write your name..."
         value={val}
       />
-      <button onClick={click} className="btn">
+      <button onClick={handleClick} className="btn">
         Submit
       </button>
 
@@ -62,7 +62,7 @@ function Input() {
           width={windowDimension.width}
           height={windowDimension.height}
           recycle={false}
-          numberOfPieces={200}
+          numberOfPieces={500}
           onConfettiComplete={handleConfettiComplete}
         />
       )}
