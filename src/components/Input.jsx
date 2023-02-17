@@ -4,6 +4,7 @@ import capitalize from "../helperFunctions/capitalize";
 
 function Input() {
   const [val, setVal] = useState("");
+  const [name, setName] = useState('')
   const [showText, setShowText] = useState(false);
   const [showConfetti, setShowConfetti] = useState(false);
   const [windowDimension, setWindowDimension] = useState({
@@ -30,6 +31,7 @@ function Input() {
     if (val !== "") {
       setShowText(true);
       setShowConfetti(true);
+      setVal('')
     } else {
       alert("please write your name");
     }
@@ -37,6 +39,7 @@ function Input() {
 
   const handleChange = (event) => {
     setVal(event.target.value);
+    setName(event.target.value);
     setShowText(false)
   };
 
@@ -56,7 +59,7 @@ function Input() {
         Submit
       </button>
 
-      {showText && <p>Hello {capitalize(val)}!</p>}
+      {showText && <p>Hello {capitalize(name)}!</p>}
       {showConfetti && (
         <ReactConfetti
           width={windowDimension.width}
