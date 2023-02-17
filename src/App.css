@@ -63,6 +63,10 @@
   padding: .2rem;
   transition: all .2s ease-in-out;
 }
+p{
+  font-size: 2em;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 
 .btn:hover{
   background-color: #282c34;
